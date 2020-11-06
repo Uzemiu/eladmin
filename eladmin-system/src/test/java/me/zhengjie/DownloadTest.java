@@ -30,7 +30,7 @@ public class DownloadTest {
         ProjectQueryCriteria criteria = new ProjectQueryCriteria();
         List<ProjectDto> projectList = projectService.queryAll(criteria);
         for(ProjectDto projectDto : projectList){
-            User u = projectDto.getLeader();
+//            User u = projectDto.getLeader();
             int i;
         }
         System.out.println(projectList);

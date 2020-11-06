@@ -26,7 +26,7 @@ import org.mapstruct.ReportingPolicy;
 * @author neptu
 * @date 2020-10-31
 **/
-@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring", uses = UserMapper.class, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface ProjectMapper extends BaseMapper<ProjectDto, Project> {
 
 }

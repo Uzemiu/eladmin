@@ -16,6 +16,8 @@
 package me.zhengjie.modules.system.service.dto;
 
 import lombok.Data;
+
+import java.sql.Timestamp;
 import java.util.List;
 import me.zhengjie.annotation.Query;
 
@@ -26,4 +28,19 @@ import me.zhengjie.annotation.Query;
 **/
 @Data
 public class ProjectQueryCriteria {
+
+    @Query
+    private Integer status;
+
+    @Query(blurry = "name,description")
+    private String blurry;
+
+    @Query(type = Query.Type.BETWEEN)
+    private List<Timestamp> startTime;
+
+    @Query(type = Query.Type.BETWEEN)
+    private List<Timestamp> endTime;
+
+    @Query(type = Query.Type.IN)
+    private List<Integer> leader;
 }

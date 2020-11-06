@@ -23,9 +23,9 @@ public class ProjectDto extends BaseDTO {
 
     private Timestamp endTime;
 
-    private User leader;
+    private UserDto leader;
 
-    private Set<User> member;
+    private Set<UserDto> member;
 
     private Integer status;
 }
